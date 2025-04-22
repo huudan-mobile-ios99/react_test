@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "react-native start",
+    "start": "node server.js ",
+
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "webpack serve --mode development",
