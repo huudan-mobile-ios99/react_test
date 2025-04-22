@@ -19,6 +19,9 @@ const foods = [
 app.get('/api/foods', (req, res) => {
   res.json(foods);
 });
+app.get('/', (req, res) => {
+  res.json('home');
+});
 
 app.get('/api/foods/:id', (req, res) => {
   const food = foods.find(f => f.id === parseInt(req.params.id));
