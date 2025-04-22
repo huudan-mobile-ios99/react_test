@@ -1,0 +1,23 @@
+{
+    "foods": [
+      {
+        "id": 1,
+        "name": "Bún bò Huế",
+        "image": "https://i.imgur.com/dF7nQZp.jpeg",
+        "status": "Available"
+      },
+      {
+        "id": 2,
+        "name": "Phở bò",
+        "image": "https://i.imgur.com/I5nDk4y.jpeg",
+        "status": "Sold Out"
+      },
+      {
+        "id": 3,
+        "name": "Cơm tấm sườn",
+        "image": "https://i.imgur.com/o1LfC6T.jpeg",
+        "status": "Available"
+      }
+    ]
+  }
+  
