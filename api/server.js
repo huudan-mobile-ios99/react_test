@@ -4,49 +4,21 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// Data
 const foods = [
-  {
-    id: 1,
-    name: "Bún bò Huế",
-    imageUrl: "/images/ab.jpg",
-    price: 45000,
-    status: "Available",
-    description: "Bún bò Huế thơm ngon, đậm đà hương vị miền Trung"
-  },
-  {
-    id: 2,
-    name: "Phở bò",
-    imageUrl: "/images/ba.jpg",
-    price: 40000,
-    status: "Sold Out",
-    description: "Phở bò truyền thống với nước dùng ngọt thanh"
-  },
-  {
-    id: 3,
-    name: "Miến",
-    imageUrl: "/images/mien.jpg",
-    price: 35000,
-    status: "Sold Out",
-    description: "Miến xào giòn với các loại rau củ tươi ngon"
-  },
-  {
-    id: 4,
-    name: "Mì",
-    imageUrl: "/images/mi.jpg",
-    price: 30000,
-    status: "Available",
-    description: "Mì trộn cay đậm đà phong cách Hàn Quốc"
-  }
+  { id: 1, name: "Bún bò Huế", imageUrl: "/images/ab.jpg", price: 45000, status: "Available", description: "Bún bò Huế thơm ngon, đậm đà hương vị miền Trung" },
+  { id: 2, name: "Phở bò", imageUrl: "/images/ba.jpg", price: 40000, status: "Sold Out", description: "Phở bò truyền thống với nước dùng ngọt thanh" },
+  { id: 3, name: "Miến", imageUrl: "/images/mien.jpg", price: 35000, status: "Sold Out", description: "Miến xào giòn với các loại rau củ tươi ngon" },
+  { id: 4, name: "Mì", imageUrl: "/images/mi.jpg", price: 30000, status: "Available", description: "Mì trộn cay đậm đà phong cách Hàn Quốc" }
 ];
 
-// Routes
 app.get('/api/foods', (req, res) => {
   res.json(foods);
+});
+app.get('/home', (req, res) => {
+  res.json('home food order');
 });
 
 app.get('/api/foods/:id', (req, res) => {
@@ -55,13 +27,11 @@ app.get('/api/foods/:id', (req, res) => {
   res.json(food);
 });
 
-// Serve static images
 app.use('/images', express.static('public/images'));
 
-// Error handling
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Internal Server Error' });
 });
 
-module.exports = app; // Export for Vercel
+module.exports = app;

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js ",
+    "start": "node server.js",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "webpack serve --mode development",
@@ -40,5 +40,13 @@
   "private": true,
   "keywords": [],
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huudan-mobile-ios99/react_test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/huudan-mobile-ios99/react_test/issues"
+  },
+  "homepage": "https://github.com/huudan-mobile-ios99/react_test#readme",
   "description": ""
 }
